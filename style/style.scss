@@ -1,0 +1,213 @@
+$background: #292929;
+$text: #FFF;
+$button: #8840B3;
+
+body {
+	font: 16px "Space Mono", monospace;
+	color: $text;
+	background: $background;
+	height: 100%
+}
+
+@media (min-width: 560px) {
+	body  {
+	font-size: 17px;
+	}
+}
+
+@media (min-width: 992px) {	
+	body  {
+	font-size: 18px;
+	}
+}
+
+.container {
+	max-width: 1360px;
+	margin: 0px auto;
+	padding: 0px 20px;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+p {
+	line-height: 26px;
+}
+
+a {
+	color: #3399CC;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 2.5em;
+}
+
+@media (min-width: 992px) {
+	h1 {
+	font-size: 3em
+	}
+}
+
+h2 {
+	font-size: 1.25em;
+	margin-top: 30px;
+}
+
+@media (min-width: 992px) {
+	h2 {
+	font-size: 1.75em;
+	}
+}
+
+header {
+	margin-top: 20px;
+	text-align: center
+}
+
+main {
+  flex-grow: 1
+}
+
+.desc {
+	text-align: center;
+}
+
+form {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 25px;
+	border-radius: 20px;
+	label {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: inherit;
+		input {	
+			font-size: 1em;
+			font-family: inherit;
+		}
+	}
+	.inputfile-box {
+		position: relative;
+	}
+
+	.inputfile {
+		display: none;
+	}
+	.file-box {
+		display: none;
+		width: 100%;
+		border: 1px solid;
+		padding: 5px 0px 5px 5px;
+		box-sizing: border-box;
+		height: 2.25em;
+	}
+	@media (min-width: 360px) {
+		.file-box {
+			display: inline-block;
+		}
+	}
+	.file-button {
+		color: $background;
+		background: white;
+		padding: 6px 5px;
+		position: absolute;
+		border: 2px solid white;
+		border-width: 2px;
+		top: 0px;
+		right: 0px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+	.file-button:hover {
+		background: linear-gradient(45deg, $button, #c648c8);
+		border-image-source: linear-gradient(45deg, $button, #c648c8);
+		color: white;
+	}
+	.file-button:focus {
+		background-color: $button;
+		color: white;
+	}
+	select {
+		appearance: none;
+		outline: 10px red;
+		border: 0;
+		box-shadow: none;
+		flex: 1;
+		padding: 0 1em;
+		color: #fff;
+		font: inherit;
+		background-color: $background;
+		background-image: none;
+		cursor: pointer;
+	}
+	label {
+		margin-top: 50px;
+		.select {
+			position: relative;
+			display: flex;
+			width: 20em;
+			height: 3em;
+			border-radius: .25em;
+			overflow: hidden;
+		}
+		.select::after {
+			display: none;
+			content: '\25BC';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			padding: 5px 15px;
+			background-color: #34495e;
+			transition: .25s all ease;
+			pointer-events: none;
+		}
+		@media (min-width: 420px) {
+		.select::after {
+			display: block;
+			}
+		}
+		.select:hover::after {
+			color: $button;
+		}
+	}
+	.button-block {
+		text-align: center;
+		button {
+			display: inline-block;
+			margin-top: 20px;
+			font-size: 1.5em;
+			font-family: inherit;
+			background: white;
+			border: 3px solid;
+			border-width: 2px;
+			border-image-source: linear-gradient(45deg, $button, #c648c8);
+			color: $background;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+		button:hover {
+			background: linear-gradient(45deg, $button, #c648c8);
+			color: white;
+		}
+		button:focus {
+			background-color: $button;
+			color: white;
+		}
+	}
+}
+
+footer {
+    flex-shrink: 0;
+	margin-top: auto;
+	margin-bottom: 70px
+}

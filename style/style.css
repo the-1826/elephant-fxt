@@ -1,0 +1,230 @@
+@charset "UTF-8";
+body {
+  font: 16px "Space Mono", monospace;
+  color: #FFF;
+  background: #292929;
+  height: 100%;
+}
+
+@media (min-width: 560px) {
+  body {
+    font-size: 17px;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    font-size: 18px;
+  }
+}
+.container {
+  max-width: 1360px;
+  margin: 0px auto;
+  padding: 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+p {
+  line-height: 26px;
+}
+
+a {
+  color: #3399CC;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+h2 {
+  font-size: 1.25em;
+  margin-top: 30px;
+}
+
+@media (min-width: 992px) {
+  h2 {
+    font-size: 1.75em;
+  }
+}
+header {
+  margin-top: 20px;
+  text-align: center;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.desc {
+  text-align: center;
+}
+
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 20px;
+}
+form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: inherit;
+}
+form label input {
+  font-size: 1em;
+  font-family: inherit;
+}
+form .inputfile-box {
+  position: relative;
+}
+form .inputfile {
+  display: none;
+}
+form .file-box {
+  display: none;
+  width: 100%;
+  border: 1px solid;
+  padding: 5px 0px 5px 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 2.25em;
+}
+@media (min-width: 360px) {
+  form .file-box {
+    display: inline-block;
+  }
+}
+form .file-button {
+  color: #292929;
+  background: white;
+  padding: 6px 5px;
+  position: absolute;
+  border: 2px solid white;
+  border-width: 2px;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+form .file-button:hover {
+  background: linear-gradient(45deg, #8840B3, #c648c8);
+  border-image-source: linear-gradient(45deg, #8840B3, #c648c8);
+  color: white;
+}
+form .file-button:focus {
+  background-color: #8840B3;
+  color: white;
+}
+form select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 10px red;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  font: inherit;
+  background-color: #292929;
+  background-image: none;
+  cursor: pointer;
+}
+form label {
+  margin-top: 50px;
+}
+form label .select {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  border-radius: 0.25em;
+  overflow: hidden;
+}
+form label .select::after {
+  display: none;
+  content: "▼";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 5px 15px;
+  background-color: #34495e;
+  -webkit-transition: 0.25s all ease;
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+@media (min-width: 420px) {
+  form label .select::after {
+    display: block;
+  }
+}
+form label .select:hover::after {
+  color: #8840B3;
+}
+form .button-block {
+  text-align: center;
+}
+form .button-block button {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-family: inherit;
+  background: white;
+  border: 3px solid;
+  border-width: 2px;
+  border-image-source: linear-gradient(45deg, #8840B3, #c648c8);
+  color: #292929;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+form .button-block button:hover {
+  background: linear-gradient(45deg, #8840B3, #c648c8);
+  color: white;
+}
+form .button-block button:focus {
+  background-color: #8840B3;
+  color: white;
+}
+
+footer {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-top: auto;
+  margin-bottom: 70px;
+}

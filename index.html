@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style/reset.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<title>Elephant .fxt Tool</title>
+</head>
+<body>
+<div class="container">
+	<header>
+		<h1>Elephant .fxt Tool</h1>
+		<p>Work with Russian .fxt files. Effectively.</p>
+	</header>
+	<main>
+		<section class="desc">
+			<h2>It's all about the encoding</h2>
+			<p>Choose the encoding type, drop a .fxt file and it will be processed.</p>
+		</section>
+		<section class="form">
+			<form>
+				<div class="inputfile-box">
+					<input type="file" id="file" class="inputfile">
+					<label for="file">
+					<span id="file-name" class="file-box"></span>
+					<span class="file-button">
+						<i class="fa fa-upload" aria-hidden="true"></i>
+						Select .fxt
+					</span>
+					</label>
+				</div>
+				<label>Origin encoding
+					<div class="select">
+						<select id="init-encoding">
+							<option value="" selected disabled hidden>Choose here</option>
+							<option>Unicode Russian</option>
+							<option>1C/Buka (GTA 3)</option>
+							<!-- <option>Fargus (GTA 3)</option> -->
+						</select>
+					</div>
+				</label>
+				<label>Target encoding
+					<div class="select">
+						<select id="target-encoding">
+						</select>
+					</div>
+				</label>
+				<div class="button-block"><button type="button" id="go">Process!</button></div>
+			</form>
+		</section>
+	</main>
+	<footer>
+		<p>Elephant .fxt Tool, 2024</p>
+		<p>Developed by 1826</p>
+		<p><a href="https://github.com/the-1826">GitHub</a></p>
+		<p><a href="https://barcode-studia.ru">Barcode Studia</a></p>
+	</footer>
+</div>
+<script src="scripts/fxt.js"></script>
+<script src="scripts/saving.js"></script>
+</body>
+</html>
