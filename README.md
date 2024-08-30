@@ -7,7 +7,7 @@ This tool is aimed to solve that problem by providing a converter for the Russia
 ## Features:
 
 * Fast converting speed
-* File is saved in Windows-1251 encoding to evade any issues with THE classic 3D GTAs fonts support
+* File is saved in Windows-1251 encoding to evade any issues with the classic 3D GTAs fonts support
 
 ## Supported encodings:
 
